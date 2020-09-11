@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import './App.scss';
+import LineChart from './LineChart/LineChart';
+import BubbleChart from './BubbleChart/BubbleChart';
 
 const CHARTTYPES = {
   LINE : "line",
@@ -20,14 +22,10 @@ const App = () => {
         </div>
       </div>
       {
-        activeChart === CHARTTYPES.LINE && <div className="line-chart__wrapper">
-          Line charts
-        </div>
+        activeChart === CHARTTYPES.LINE && <BubbleChart/>
       }
       {
-        activeChart === CHARTTYPES.BUBBLE && <div className="bubble-chart__wrapper">
-          Bubble charts
-        </div>
+        activeChart === CHARTTYPES.BUBBLE && <LineChart/>
       }
     </div>
   );
