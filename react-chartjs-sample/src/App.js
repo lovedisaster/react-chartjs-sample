@@ -22,10 +22,10 @@ const App = () => {
         </div>
       </div>
       {
-        activeChart === CHARTTYPES.LINE && <BubbleChart/>
+        activeChart === CHARTTYPES.LINE && <LineChart/>
       }
       {
-        activeChart === CHARTTYPES.BUBBLE && <LineChart/>
+        activeChart === CHARTTYPES.BUBBLE && <BubbleChart/>
       }
     </div>
   );
