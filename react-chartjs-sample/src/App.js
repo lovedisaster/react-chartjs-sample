@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import './App.scss';
 import LineChart from './LineChart/LineChart';
 import BubbleChart from './BubbleChart/BubbleChart';
+import Header from './Header/Header';
 
-const CHARTTYPES = {
+export const CHARTTYPES = {
   LINE : "line",
   BUBBLE : "bubble"
 }
@@ -13,20 +14,15 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="header">
-        <div className="container">
-          <ul className="nav">
-            <li onClick={() => setActiveChart(CHARTTYPES.LINE)} className={activeChart === CHARTTYPES.LINE ? "active" : ""}>Line chart</li>
-            <li onClick={() => setActiveChart(CHARTTYPES.BUBBLE)} className={activeChart === CHARTTYPES.BUBBLE ? "active" : ""}>Bubble chart</li>
-          </ul>
-        </div>
+      <Header activeChart={activeChart} setActiveChart={setActiveChart}/>
+      <div className="container">
+        {
+          activeChart === CHARTTYPES.LINE && <LineChart/>
+        }
+        {
+          activeChart === CHARTTYPES.BUBBLE && <BubbleChart/>
+        }
       </div>
-      {
-        activeChart === CHARTTYPES.LINE && <LineChart/>
-      }
-      {
-        activeChart === CHARTTYPES.BUBBLE && <BubbleChart/>
-      }
     </div>
   );
 }

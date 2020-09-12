@@ -5,38 +5,3 @@
   text-align: center;
 }
 
-.header{
-  border-bottom: 1px solid #007cc2;
-  background-color: #fff;
-  height: 90px;
-}
-
-.nav{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-
-  > li {
-    height: 90px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    font-size: 30px;
-    font-weight: bold;
-    color: #00639a;
-    &.active{
-      cursor: pointer;
-      background-color: #007cc2;
-      transition: 0.5s ease background-color;
-      color: #fff;
-    }
-    &:hover{
-      cursor: pointer;
-      background-color: #007cc2;
-      transition: 0.5s ease background-color;
-      color: #fff;
-    }
-  }
-}
