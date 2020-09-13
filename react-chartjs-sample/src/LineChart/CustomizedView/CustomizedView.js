@@ -33,7 +33,7 @@ const CustomizedView = props => {
     return (
         <Line
           width={600}
-          height={200}
+          height={250}
           data={sampleData}
           type="line"
           options={{

@@ -13,18 +13,12 @@ const LineChart = (props) => {
       <div className="line-chart__wrapper">
         <DefaultView/>
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+
       <h4 className="text-left">Custom view</h4>
       <div className="line-chart__wrapper">
         <CustomizedView/>
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+
       <h4 className="text-left">Custom tooltips</h4>
       <div className="line-chart__wrapper">
         <ComstomizedTooltips/>

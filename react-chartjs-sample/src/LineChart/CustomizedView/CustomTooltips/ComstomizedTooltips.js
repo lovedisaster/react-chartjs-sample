@@ -5,7 +5,7 @@ import "./Tooltips.scss";
 import DateSVG from "./Date_icn@2x.svg";
 import IncreaseSVG from "./PriceIncrease_icn@2x.svg";
 import DecreaseSVG from "./PriceDecrease_icn@2x.svg";
-import { IsEmptyValue } from "../../../Utils";
+import { IsEmptyValue, FormatNumber } from "../../../Utils";
 
 const rawData = [
   {
@@ -37,22 +37,33 @@ const rawData = [
   },
 ];
 
-const sampleData = {
-  labels: rawData.map((item) => {
-    return item.x;
-  }),
-  datasets: [
-    {
-      backgroundColor: "#fff",
-      pointBackgroundColor: "#fff",
-      data: rawData.map((item) => {
-        return {
-          x: item.x,
-          y: item.y,
-        };
-      }),
-    },
-  ],
+const sampleData = (canvas) => {
+  const ctx = canvas.getContext("2d");
+
+  //1. Using gradient background.
+  let gradient = ctx.createLinearGradient(0, 0, 0, 150);
+  gradient.addColorStop(0, "rgba(0, 124, 194, 0.1)");
+  gradient.addColorStop(0.5, "rgba(0, 124, 194, 0.3)");
+  gradient.addColorStop(1, "rgba(0, 124, 194, 0.7)");
+
+  const result = {
+    labels: rawData.map((item) => {
+      return item.x;
+    }),
+    datasets: [
+      {
+        backgroundColor: gradient,
+        pointBackgroundColor: "#fff",
+        data: rawData.map((item) => {
+          return {
+            x: item.x,
+            y: item.y,
+          };
+        }),
+      },
+    ],
+  };
+  return result;
 };
 
 const customTooltips = function (tooltip) {
@@ -139,15 +150,81 @@ const ComstomizedTooltips = (props) => {
   return (
     <Line
       width={600}
+      height={250}
       data={sampleData}
       type="line"
       options={{
+        legend: { display: false },
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+          padding: 20,
+        },
+        elements: {
+          line: {
+            cubicInterpolationMode: "monotone",
+            tension: 1,
+            borderWidth: 3,
+            borderColor: "#007CC2",
+            stepped: true,
+            fill: "bottom",
+          },
+          point: {
+            borderColor: "#027DC4",
+            backgroundColor: "#fff",
+            hoverBackgroundColor: "#fff",
+            borderWidth: 2,
+            radius: 5,
+            hoverRadius: 7,
+            hoverBorderWidth: 2,
+          },
+        },
+        scales: {
+          yAxes: [
+            {
+              gridLines: {
+                color: "#F7F7F7",
+                drawBorder: false,
+                lineWidth: 2,
+                zeroLineWidth: 2,
+                zeroLineColor: "#F7F7F7",
+              },
+              ticks: {
+                fontColor: "#888",
+                beginAtZero: false,
+                padding: 15,
+                stepSize: 500,
+                callback: (value) => {
+                  return `$${FormatNumber(value)}`;
+                },
+              },
+            },
+          ],
+          xAxes: [
+            {
+              gridLines: {
+                color: "#F7F7F7",
+                drawBorder: false,
+                lineWidth: 2,
+                zeroLineWidth: 2,
+                zeroLineColor: "#F7F7F7",
+              },
+              ticks: {
+                fontColor: "#888",
+                beginAtZero: true,
+                padding: 15,
+                callback: (value) => {
+                  return `${value} days`;
+                },
+              },
+            },
+          ],
+        },
         tooltips: {
           enabled: false,
           custom: customTooltips,
           callbacks: {
             label: (tooltipItem, data) => {
-
               const rawDataItem = rawData.find(
                 (item) => item.x === tooltipItem.xLabel
               );
