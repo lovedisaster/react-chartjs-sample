@@ -7,8 +7,9 @@ const sampleData = (canvas) => {
 
     //1. Using gradient background. 
     let gradient = ctx.createLinearGradient(0, 0, 0, 150);
-    gradient.addColorStop(0, "rgba(0, 124, 194, 0.5)");
-    gradient.addColorStop(1, "rgba(255,255,255,1)");
+    gradient.addColorStop(0, "rgba(0, 124, 194, 0.1)");
+    gradient.addColorStop(0.5, "rgba(0, 124, 194, 0.3)");
+    gradient.addColorStop(1, "rgba(0, 124, 194, 0.7)");
   
     const result = {
       labels: [0, 14, 59, 79],

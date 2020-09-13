@@ -24,3 +24,13 @@ export const FormatNumber = (n) => {
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return parts.join(".");
 };
+
+export const FormatDate = (timestamp) => {
+  const WeekMonthDay = new Date(timestamp).toString().substr(0, 10);
+  var [week, month, day] = WeekMonthDay.split(" ");
+
+  // turn date 04 into 4
+  day = day[0] === "0" ? day.substr(1) : day;
+
+  return `${week}, ${day} ${month}`;
+};

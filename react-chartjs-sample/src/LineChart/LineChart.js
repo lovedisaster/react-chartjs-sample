@@ -2,6 +2,7 @@ import React from "react";
 import "./LineChart.scss";
 import DefaultView from "../LineChart/DefaultView/DefaultView";
 import CustomizedView from "../LineChart/CustomizedView/CustomizedView";
+import ComstomizedTooltips from "./CustomizedView/CustomTooltips/ComstomizedTooltips";
 
 const LineChart = (props) => {
   return (
@@ -19,6 +20,14 @@ const LineChart = (props) => {
       <h4 className="text-left">Custom view</h4>
       <div className="line-chart__wrapper">
         <CustomizedView/>
+      </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <h4 className="text-left">Custom tooltips</h4>
+      <div className="line-chart__wrapper">
+        <ComstomizedTooltips/>
       </div>
     </div>
   );

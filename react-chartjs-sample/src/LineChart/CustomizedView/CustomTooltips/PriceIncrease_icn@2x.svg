@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5px" height="10px" viewBox="0 0 5 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>PriceIncrease_icn@2x</title>
+    <g id="Smart-Buyer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Smart-Buyer-Activity-&amp;-Pricing" transform="translate(-763.000000, -2153.000000)" fill="#CE2828">
+            <g id="Group-12" transform="translate(759.000000, 2119.000000)">
+                <path d="M8.37897761,41.0081196 C8.857107,41.0081196 9.0961717,41.5843513 8.75805231,41.9224707 L6.8369627,43.8435603 C6.62742393,44.0521466 6.28930454,44.0521466 6.07976576,43.8435603 L4.15772371,41.9224707 C3.82055677,41.5843513 4.05962147,41.0081196 4.53775086,41.0081196 L5.56544331,41.0081196 L5.56544331,34.2676382 C5.56544331,34.1200086 5.68545188,34 5.83308147,34 L7.08364699,34 C7.23127658,34 7.35128516,34.1200086 7.35128516,34.2676382 L7.35128516,41.0081196 L8.37897761,41.0081196 Z" id="PriceIncrease_icn" transform="translate(6.458217, 39.000000) scale(1, -1) translate(-6.458217, -39.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
