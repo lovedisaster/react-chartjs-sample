@@ -1,0 +1,38 @@
+.bubble-chart__legend-outter{
+    width: 100%;
+    margin-top: 20px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @media(min-width: 768px){
+        -ms-overflow-style: none; 
+    }
+}
+
+
+.bubble-chart__legend-inner{
+    width: 100%;
+    min-width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0;
+}
+
+.bubble-chart__legend-item{
+    padding: 3px 5px;
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #808080;
+    > span{
+        white-space: nowrap;
+    }
+    >img{
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+}

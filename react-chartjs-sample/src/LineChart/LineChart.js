@@ -10,17 +10,17 @@ const LineChart = (props) => {
       <br/>
       <br/>
       <h4 className="text-left">Default view</h4>
-      <div className="line-chart__wrapper">
+      <div className="chart-wrapper">
         <DefaultView/>
       </div>
 
       <h4 className="text-left">Custom view</h4>
-      <div className="line-chart__wrapper">
+      <div className="chart-wrapper">
         <CustomizedView/>
       </div>
 
       <h4 className="text-left">Custom tooltips</h4>
-      <div className="line-chart__wrapper">
+      <div className="chart-wrapper">
         <ComstomizedTooltips/>
       </div>
     </div>

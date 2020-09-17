@@ -5,3 +5,16 @@
   text-align: center;
 }
 
+.chart-wrapper{
+  width: 100%;
+  margin: auto;
+  height: auto;
+  border: 1px solid #eee;
+  box-shadow: 0px 2px 1px -1px #dbdbdb, 0px 1px 1px 0px #dbdbdb, 0px 1px 3px 0px #dbdbdb;
+  border-radius: 10px;
+  padding: 30px 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 30px;
+}

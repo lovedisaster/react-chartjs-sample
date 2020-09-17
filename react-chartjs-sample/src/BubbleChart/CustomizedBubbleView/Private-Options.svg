@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Private-Options@2x</title>
+    <g id="Smart-Buyer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Smart-Buyer-Market-Pricing---Graph-view" transform="translate(-921.000000, -975.000000)">
+            <g id="Private-Options" transform="translate(921.000000, 975.000000)">
+                <rect id="Rectangle" stroke="#FFB100" x="0.5" y="0.5" width="21" height="21" rx="10.5"></rect>
+                <rect id="Rectangle" stroke="#272E62" fill="#5862AC" x="6.5" y="6.5" width="9" height="9" rx="4.5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

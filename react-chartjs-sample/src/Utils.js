@@ -16,6 +16,11 @@ export const DeepClone = (o) => {
     return output;
 };
 
+
+export const RoundNumber = (number, precision) => {
+  return _.round(number, precision);
+};
+
 export const FormatNumber = (n) => {
     if (IsEmptyValue(n)) {
       return 0;
