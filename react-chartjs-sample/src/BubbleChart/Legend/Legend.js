@@ -1,5 +1,5 @@
 import React from 'react';
-import thisCar from "./car.svg";
+import thisCar from "../CustomizedBubbleView/car.svg";
 import privateCars from "./Private.svg";
 import dealerCars from "./Dealer.svg";
 import delistedCars from "./Delisted.svg";

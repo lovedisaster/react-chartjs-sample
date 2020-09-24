@@ -2,6 +2,7 @@ import React from 'react';
 import {FormatNumber,RoundNumber} from "../../Utils";
 import chartData from "./data";
 import { Chart, Bubble } from "react-chartjs-2";
+import zoom from "chartjs-plugin-zoom";
 
 const CustomizedBubbleView = props => {
     return (
@@ -23,6 +24,19 @@ const CustomizedBubbleView = props => {
                     point: {
                       hoverRadius: 4,
                     },
+                  },
+                  pan: {
+                    enabled: true,
+                    mode: "xy",
+                    onPan: function({chart}) { return false; },
+                  },
+                  zoom: {
+                    enabled: true,
+                    drag: false,
+                    mode: "xy",
+                    speed: 1,
+                    threshold: 10,
+                    sensitivity: 3,
                   },
                   scales: {
                     yAxes: [

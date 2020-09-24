@@ -8,10 +8,8 @@ const DefaultBubbleView = props => {
             height={400}
             data={chartData}
             options={{
-
                 maintainAspectRatio: false
             }
-
             }
         />
     );
