@@ -96,7 +96,6 @@ const customTooltips = function (tooltip) {
 
   // Set custom tooltip
   if (tooltip.body) {
-    // const titleLines = tooltip.title || [];
     const bodyLines = tooltip.body.map(getBody);
     const tooltipData = bodyLines[0][0].rawDataItem;
 

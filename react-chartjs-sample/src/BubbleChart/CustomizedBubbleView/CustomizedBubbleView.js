@@ -34,7 +34,7 @@ const CustomizedBubbleView = props => {
                     enabled: true,
                     drag: false,
                     mode: "xy",
-                    speed: 1,
+                    speed: 0.01,
                     threshold: 10,
                     sensitivity: 3,
                   },
